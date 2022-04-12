@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+    <title>TicTacToe</title>
+</head>
+
+<body>
+    <div class="main">
+        <img src="img/gameOver.jpg" id="gameOver" class="game-over d-none">
+        <button onclick="restartGame()" id="restart-btn" class="restart-btn d-none">Restart</button>
+        <div class="players">
+            <span id="player-1" class="player">Player 1 <span class="neonTextRed player-img">X</span></span>
+            <span id="player-2" class="player inactive-player">Player 2 <span
+                    class="neonTextGreen player-img">0</span></span>
+        </div>
+        <div class="table-position">
+            <div id="line-1" class="horizontal-line" style="top:60px;"></div>
+            <div id="line-2" class="horizontal-line" style="top:200px;"></div>
+            <div id="line-3" class="horizontal-line" style="top:343px;"></div>
+            <div id="line-4" class="horizontal-line make-vertical" style="top:200px; right: 135px;"></div>
+            <div id="line-5" class="horizontal-line make-vertical" style="top:200px;"></div>
+            <div id="line-6" class="horizontal-line make-vertical" style="top:200px; left: 135px;"></div>
+            <div id="line-7" class="horizontal-line" style="top:200px; transform: rotate(45deg) scaleX(0.0);"></div>
+            <div id="line-8" class="horizontal-line" style="top:200px; transform: rotate(-45deg) scaleX(0.0);"></div>
+            <table id=playfield>
+                <tr>
+                    <td onclick="fillShape(0)">
+                        <span id="cross-0" class="shape d-none neonTextRed">X</span>
+                        <span id="circle-0" class="shape d-none neonTextGreen">O</span>
+                    </td>
+                    <td onclick="fillShape(1)">
+                        <span id="cross-1" class="shape d-none neonTextRed">X</span>
+                        <span id="circle-1" class="shape d-none neonTextGreen">O</span>
+                    </td>
+                    <td onclick="fillShape(2)">
+                        <span id="cross-2" class="shape d-none neonTextRed">X</span>
+                        <span id="circle-2" class="shape d-none neonTextGreen">O</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td onclick="fillShape(3)">
+                        <span id="cross-3" class="shape d-none neonTextRed">X</span>
+                        <span id="circle-3" class="shape d-none neonTextGreen">O</span>
+                    </td>
+                    <td onclick="fillShape(4)">
+                        <span id="cross-4" class="shape d-none neonTextRed">X</span>
+                        <span id="circle-4" class="shape d-none neonTextGreen">O</span>
+                    </td>
+                    <td onclick="fillShape(5)">
+                        <span id="cross-5" class="shape d-none neonTextRed">X</span>
+                        <span id="circle-5" class="shape d-none neonTextGreen">O</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td onclick="fillShape(6)">
+                        <span id="cross-6" class="shape d-none neonTextRed">X</span>
+                        <span id="circle-6" class="shape d-none neonTextGreen">O</span>
+                    </td>
+                    <td onclick="fillShape(7)">
+                        <span id="cross-7" class="shape d-none neonTextRed">X</span>
+                        <span id="circle-7" class="shape d-none neonTextGreen">O</span>
+                    </td>
+                    <td onclick="fillShape(8)">
+                        <span id="cross-8" class="shape d-none neonTextRed">X</span>
+                        <span id="circle-8" class="shape d-none neonTextGreen">O</span>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</body>
+
+</html>

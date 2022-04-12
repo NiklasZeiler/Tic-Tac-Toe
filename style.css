@@ -1,0 +1,178 @@
+body {
+  background-image: url(img/black-wall.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+}
+
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.table-position {
+  width: 400px;
+  height: 400px;
+  position: relative;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+tr {
+  width: 399px;
+}
+
+td {
+  position: relative;
+  border: 5px solid black;
+  width: 133px;
+  height: 133px;
+  cursor: pointer;
+  border-color: #50BFE6;
+}
+
+td:hover {
+  background-color: rgba(255, 255, 102, 0.2);
+}
+
+table tr:first-child td {
+  border-top: 0;
+}
+
+tr td:first-child {
+  border-left: 0;
+}
+
+table tr:last-child td {
+  border-bottom: 0;
+}
+
+tr td:last-child {
+  border-right: 0;
+}
+
+.shape {
+  position: absolute;
+  left: 6px;
+  top: -25px;
+  font-size: 160px;
+}
+
+.d-none {
+  display: none;
+}
+
+.neonTextRed {
+  color: #FD5B78;
+  text-shadow: /* White glow */
+  0 0 7px #fff, 0 0 10px #fff, 0 0 21px #fff, /* Red glow */
+  0 0 42px #FD5B78, 0 0 82px #FD5B78, 0 0 92px #FD5B78, 0 0 102px #FD5B78, 0 0 151px #FD5B78;
+}
+
+.neonTextGreen {
+  color: #66FF66;
+  text-shadow: /* White glow */
+  0 0 7px #fff, 0 0 10px #fff, 0 0 21px #fff, /* Green glow */
+  0 0 42px #66FF66, 0 0 82px #66FF66, 0 0 92px #66FF66, 0 0 102px #66FF66, 0 0 151px #66FF66;
+}
+
+.player-img {
+  font-size: 160px;
+}
+
+.players {
+  display: flex;
+}
+
+.player {
+  color: white;
+  text-align: center;
+  font-size: 38px;
+  display: flex;
+  flex-direction: column;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.inactive-player {
+  opacity: 0.5;
+}
+
+.horizontal-line {
+  position: absolute;
+  height: 10px;
+  background-color: #50BFE6;
+  width: 399px;
+  transform: scaleX(0.0);
+  transition: transform 225ms ease-in-out;
+  z-index: 99;
+  box-shadow: unset;
+}
+
+.make-vertical {
+  transform: rotate(90deg) scaleX(0.0);
+  top: 200px;
+  width: 399px;
+}
+
+.game-over {
+  position: absolute;
+  z-index: 100;
+  left: 0;
+  right: 0;
+  bottom: 90px;
+  object-fit: cover;
+  width: 100%;
+  height: 70vh;
+  animation: zoomIn 225ms ease-in-out;
+}
+
+@keyframes zoomIn {
+  from {
+    opacity: 0;
+    transform: scale(0);
+  }
+}
+
+to {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.restart-btn {
+  background-color: black;
+  color: white;
+  width: 300px;
+  height: 50px;
+  font-size: 30px;
+  cursor: pointer;
+  position: absolute;
+  bottom: 33px;
+  border-color: #50BFE6;
+  box-shadow: 1px 0px 21px 13px #50bfe6;
+  z-index: 100;
+}
+
+.restart-btn:hover {
+  background: linear-gradient(to right, #FFF 20%, #50bfe6 40%, #50bfe6 60%, #FFF 80%);
+  background-size: 200% auto;
+  color: #000;
+  background-clip: text;
+  animation: shine 1s linear infinite;
+}
+
+@keyframes shine {
+  to {
+    background-position: 200% center;
+  }
+}
+
+@media (max-width: 800px) {
+  body {
+    height: 102vh;
+  }
+}
